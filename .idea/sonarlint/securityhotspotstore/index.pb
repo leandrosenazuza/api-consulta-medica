@@ -18,3 +18,5 @@ M
 src/controllers/controller.py,5\7\5767ca2009cbecb33237b0f6b91565fea0c9666b
 D
 src/routes/routes.py,2\7\27b244889909b0048f22e9af737e1b79369334b3
+C
+src/database/db.sql,b\a\bafc1d06065291448be18f8e783ad891f6440004
