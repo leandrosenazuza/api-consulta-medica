@@ -1,0 +1,1 @@
+#Para fazer a conexão com o banco de dados, é necessário instalar a dependência pymysql no venv
