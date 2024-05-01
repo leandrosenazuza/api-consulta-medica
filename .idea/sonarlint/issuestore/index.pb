@@ -12,3 +12,9 @@
 :
 
 src/app.py,a\c\ac95095330a4a20b1f198c92db70024a198bb660
+K
+src/controllers/controle.py,8\4\84088edf2ad7b4d1efd938b4d05cff91dd14f798
+M
+src/controllers/controller.py,5\7\5767ca2009cbecb33237b0f6b91565fea0c9666b
+D
+src/routes/routes.py,2\7\27b244889909b0048f22e9af737e1b79369334b3
