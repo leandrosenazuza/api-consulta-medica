@@ -1,9 +1,9 @@
 from src.controllers.controller import *
+from src.controllers.errors import NotFoundController
 
 routes = {
-    "ola_route":"/", "olacontroller": oieContorller.as_view("ola"),
+    "intex_route": "/", "index_controller": IndexController.as_view("index"),
 }
 
 
 
-#Criação no routes do dicionário de rotas

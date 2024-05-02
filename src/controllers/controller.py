@@ -1,5 +1,11 @@
 from flask.views import MethodView
+from flask import request, render_template, redirect
+from src.db import pymysql
 
-class oieContorller(MethodView):
+
+class IndexController(MethodView):
     def get(self):
-        return "oie"
+        return ;
+
+class post(self):
+    code = request.form['nome']

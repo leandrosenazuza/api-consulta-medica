@@ -1,13 +1,14 @@
 -- Criação da table principal.
+-- É necessário especificar o datablase que está sendo utilizado para criar os scritps.
 CREATE TABLE IF NOT EXISTS TAB_PACIENTES(
     codigoPaciente INT(4) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
     CPF VARCHAR(11) NOT NULL,
-    nome VARCHAR(30) NOT NULL,
+    nome VARCHAR(90) NOT NULL,
     dataNascimento DATE,
     idade INT NOT NULL,
     codigoColetaPaciente INT(4) UNSIGNED ZEROFILL, -- (CHAVE ESTRANGEIRA)
     PRIMARY KEY(codigoPaciente),
-    FOREIGN KEY (codigoColetaPaciente) REFERENCES TAB_COLETA_PACIENTE(codigoColetaPaciente) ON DELETE CASCADE
+    --FOREIGN KEY (codigoColetaPaciente) REFERENCES TAB_COLETA_PACIENTE(codigoColetaPaciente) ON DELETE CASCADE
 
 )
 
@@ -19,3 +20,6 @@ CREATE TABLE IF NOT EXISTS TAB_COLETA_PACIENTE(
     proximaColeta DATE,
     PRIMARY KEY(codigoColetaPaciente)
 )
+
+-- Adicionar chave estrangeira à TAB_PACIENTES
+ALTER TABLE TAB_PACIENTES ADD CONSTRAINT FK_codigoColetaPaciente FOREIGN KEY (codigoColetaPaciente) REFERENCES TAB_COLETA_PACIENTE(codigoColetaPaciente) ON DELETE CASCADE
