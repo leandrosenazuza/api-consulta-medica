@@ -1,0 +1,5 @@
+
+hpython:S1192˜"ODefine a constant instead of duplicating this literal "LIKE BINARY %s" 3 times.(·«ƒè
+fpython:S1192—"HDefine a constant instead of duplicating this literal "LIKE %s" 4 times.(ê‡µèúÿÿÿÿ
+kpython:S1192£"RDefine a constant instead of duplicating this literal "`%(column)s` >= 0" 3 times.(èí¾Ë
+qpython:S1192ê"XDefine a constant instead of duplicating this literal "varchar(%(max_length)s)" 4 times.(©Ò®»

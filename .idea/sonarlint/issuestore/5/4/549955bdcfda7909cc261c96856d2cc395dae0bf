@@ -1,0 +1,7 @@
+
+lpython:S3776}"TRefactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.(ÙÑÆâ
+_python:S5724¸"ARemove 2 parameters; property getter methods receive only "self".(¦Ë•¦ýÿÿÿÿ
+Zpython:S5724ü"ARemove 2 parameters; property getter methods receive only "self".(­ùúµ
+Zpython:S5724ö"ARemove 2 parameters; property getter methods receive only "self".(Æ§¦Û
+_python:S5724ð"ARemove 2 parameters; property getter methods receive only "self".(âë¥›øÿÿÿÿ
+Lpython:S1172•".Remove the unused function parameter "kwargs".(­þÁñþÿÿÿÿ
