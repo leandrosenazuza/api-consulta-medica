@@ -1,0 +1,28 @@
+
+”python:S116	"VRename this field "InterfaceError" to match the regular expression ^[_a-z][_a-z0-9]*$.(áÅÉ³J$cfb0700d-591e-4532-b6d3-9384e80fd36c
+”python:S116“	"VRename this field "IntegrityError" to match the regular expression ^[_a-z][_a-z0-9]*$.(úµ¾úJ$faf12150-daca-43fb-af68-194aa450dfc8
+›python:S116’	"XRename this field "OperationalError" to match the regular expression ^[_a-z][_a-z0-9]*$.(¾’ÕúûÿÿÿÿJ$fb009ab4-6e31-4166-ad88-6b7cf8fef3de
+’python:S116	"URename this field "DatabaseError" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÇÁœ7J$42c3e377-fe35-4d7a-b23a-65ecd07664ae
+›python:S116•	"XRename this field "ProgrammingError" to match the regular expression ^[_a-z][_a-z0-9]*$.(‰ù¹ÛúÿÿÿÿJ$e9a2e211-e801-489b-9e39-2100dab6f780
+’python:S116	"ORename this field "Warning" to match the regular expression ^[_a-z][_a-z0-9]*$.(œ·ƒÎûÿÿÿÿJ$c883a48a-f657-4afb-9691-df014ae30a0a
+python:S116	"MRename this field "Error" to match the regular expression ^[_a-z][_a-z0-9]*$.(‘²¾ïúÿÿÿÿJ$16108730-0f07-4c5a-a5e0-e2d686384829
+˜python:S116”	"URename this field "InternalError" to match the regular expression ^[_a-z][_a-z0-9]*$.(êÈêòùÿÿÿÿJ$b8b90123-6d71-4f3f-99ef-3bb002cfaec4
+python:S116‘	"QRename this field "DataError" to match the regular expression ^[_a-z][_a-z0-9]*$.(ØüŠéJ$3bbc9bac-2b11-4b6a-a781-7d8c8b6161ae
+œpython:S116–	"YRename this field "NotSupportedError" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÿ‘ÕšıÿÿÿÿJ$b1227e47-c5ce-4f2c-b495-e67ca342e463
+python:S107©"MMethod "__init__" has 39 parameters, which is greater than the 13 authorized.( ĞàşüÿÿÿÿJ$cc56db10-524d-42a8-9820-081da2e03653
+˜python:S3776¨"TRefactor this function to reduce its Cognitive Complexity from 69 to the 15 allowed.(ú„ÚüùÿÿÿÿJ$04c96ea4-12b9-427f-88bb-e2c35999a50c
+˜python:S3776ï"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.( €ÈÉûÿÿÿÿJ$2416fea4-ddd9-4c73-8fd2-990002b93eb2
+{python:S5754¯"<Specify an exception class to catch or reraise the exception(´Ø¶İJ$9188b800-12f2-4c5f-ac9b-bdc893488048
+]python:S125©"Remove this commented out code.(îğ¨œJ$8d3bf854-315b-46ec-a48b-290aed620f2d
+“python:S3776ò"TRefactor this function to reduce its Cognitive Complexity from 39 to the 15 allowed.(®ôë¯J$6e5e5114-d3fb-47ab-97fb-734c0e47dba7
+{python:S5754º"<Specify an exception class to catch or reraise the exception(´Ø¶İJ$3d29634c-f367-4079-ba17-a04a88395dcc
+˜python:S3776Ú"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(ñÈ«¡üÿÿÿÿJ$86a2e030-8b8c-408c-81af-69d5ee9e75a0
+bpython:S125ä"Remove this commented out code.(ıı¨ışÿÿÿÿJ$33ce1811-860b-4ed5-a6c6-96f194db0fa7
+˜python:S3776í"TRefactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.(ĞÓÑ±úÿÿÿÿJ$d078f9ee-f180-4034-a5f5-29e72406d935
+˜python:S3776Û"TRefactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.(ÍÛÏúÿÿÿÿJ$5187bbed-16ac-4d4d-8808-1faeb311d85d
+spython:S1135á"4Complete the task associated to this "TODO" comment.(ˆû²…J$31e62a2c-1d2a-4916-8c0c-29a37b9ebe01
+xpython:S1135÷	"4Complete the task associated to this "TODO" comment.(–ö³ğÿÿÿÿÿJ$c69346a9-93ad-4337-abf5-89efd0000f33
+jpython:S1481×
+"+Replace the unused loop index "i" with "_".(¡Ş–ÅJ$d5dab2d4-5995-461f-b5d0-f668f3f035c7
+˜python:S3776Ï
+"TRefactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.(Üó³üÿÿÿÿJ$6cb2fa1b-00ea-46ed-8800-def79b2f3023
