@@ -11,4 +11,4 @@ docker pull mysql
 docker run -p 3306:3306 --name mysql_univesp -e MYSQL_ROOT_PASSWORD=root -d mysql
 
 
-https://www.youtube.com/watch?v=nDvKyX-6p6s&list=PL2Dw5PtrD32wC32rRLJSueOFPRgekHxNG&index=2&ab_channel=Cursosdeprograma%C3%A7%C3%A3o
+https://www.youtube.com/watch?v=nDvKyX-6p6s&list=PL2Dw5PtrD32wC32rRLJSueOFPRgekHxNG&index=20&ab_channel=Cursosdeprograma%C3%A7%C3%A3o

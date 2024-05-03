@@ -490,3 +490,7 @@ n
 >venv/Lib/site-packages/mysql/connector/aio/plugins/__init__.py,a\4\a454770d63396fcfea692e9ff3bdee734ab4a987
 u
 Evenv/Lib/site-packages/mysql/connector/aio/plugins/sha256_password.py,0\4\046071c34d3b71b2b822c9f66f4d7e45d64a8b37
+G
+src/templates/base.html,5\3\53d43689e8f59a96532a4b7fefe5b3fe7dfbe2e3
+O
+src/templates/public/index.html,b\3\b357c0207397b0c2d1cf8bd748d3b5c42fb8cfa3
