@@ -27,18 +27,16 @@
         {% for paciente in data %}
             <tr>
                 <td>{{paciente.3}}</td>
-                <td>{{paciente.2}} </td>
+                <td>{{paciente.2}}</td>
                 <td>
-                    <form action="/delete/paciente/{{paciente.0}}" method="post">
-                        <button>Apagar</button>
-                    </form>
+                    <a href="/update/paciente/{{ paciente .0 }}">
+                        <button>Atualizar</button>
+                    </a>
                 </td>
                 <td>
-                    <form action="/update/paciente/{{paciente.0}}">
-                        <button>Atualizar</button>
+                    <form action="/delete/paciente/{{ paciente.0 }}" method="post">
+                        <button>Apagar</button>
                     </form>
-                    {% else %}
-                    Não há paciente cadastrado com esse ID.
                 </td>
             </tr>
         </tbody>

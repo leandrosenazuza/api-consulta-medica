@@ -1,8 +1,7 @@
 
-©python:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8ôĞÛ˜ô1J$8ceb5471-b4f8-4f36-906a-5214ecb0111f
-£python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘àø8üĞÛ˜ô1J$b63ec549-61e4-4b5f-bae0-287f959f4110
-¨python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8‚ÑÛ˜ô1J$e5463966-5c79-489c-b171-442fc6105856
-zpython:S930("1Remove this unexpected named argument 'paciente'.(³¶Şùÿÿÿÿ8ƒÑÛ˜ô1J$5e6ea150-8e74-4e35-a609-e1bc4007fd73
-©python:S1170"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8…ÑÛ˜ô1J$9d6bf8ec-e5e0-44c6-a66c-ea5271d405d0
-¨python:S117."_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8…ÑÛ˜ô1J$cf1654f3-5424-435c-9836-26bf115cfae3
-¦python:S117+"]Rename this local variable "pacienteCode" to match the regular expression ^[_a-z][a-z0-9_]*$.(‡Äñÿÿÿÿÿ8İ˜ô1J$5e9ac0db-8110-42dc-98dc-a2ffd76b7784
+©python:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8·¦öšô1J$17bde0d9-d02f-4fe9-9930-ba9e9f788013
+£python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘àø8¸¦öšô1J$4e1e410e-7f89-4530-9257-1a4fe676eb2b
+¨python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8¸¦öšô1J$8f06d7c0-312c-48f8-9d47-1d6df035f49b
+©python:S1170"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8¸¦öšô1J$9a8017f5-0b87-42b9-9022-b4a4450032e5
+£python:S117+"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘àø8¿İ™›ô1J$cd62cb31-41c6-44b7-8ee7-873cbee5c437
+¨python:S117."_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8¸¦öšô1J$9c247c5e-e0fa-46cf-9599-f9e082c0ca94

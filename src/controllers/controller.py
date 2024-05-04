@@ -33,14 +33,14 @@ class DeletePacienteController(MethodView):
         return redirect('/')
 
 class UpdatePacienteController(MethodView):
-    def post(self, code):
+    def get(self, code):
         with mysql.cursor()as cur:
             cur.execute("SELECT * FROM sys.TAB_PACIENTES WHERE codigoPaciente=%s", code)
-            paciente = cur.fetchone(code)
-        return redirect('public/update.html', paciente=paciente)
+            paciente = cur.fetchone()
+        return render_template('public/update.html', paciente=paciente)
 
     def post(self,code):
-        pacienteCode = request.form['codigoPaciente'],
+        codigoPaciente = request.form['codigoPaciente'],
         CPF = request.form['CPF'],
         nome = request.form['nome'],
         dataNascimento = request.form['dataNascimento'],
@@ -48,7 +48,11 @@ class UpdatePacienteController(MethodView):
         codigoColetaPaciente = request.form['codigoColetaPaciente']
 
         with mysql.cursor() as cur:
-            cur.execute("UPDANTE sys.TAB_PACIENTES SET codigoPaciente=%S, CPF=%S, nome=%S, dataNascimento=%S, idade=%S,codigoColetaPaciente=%S WHERE code =%S", (pacienteCode, CPF, nome, dataNascimento, idade, codigoColetaPaciente))
+            cur.execute("UPDANTE sys.TAB_PACIENTES SET codigoPaciente=%S, CPF=%S, nome=%S, dataNascimento=%S, idade=%S,codigoColetaPaciente=%s WHERE code =%s", (codigoPaciente, CPF, nome, dataNascimento, idade, codigoColetaPaciente))
             cur.connection.commit()
             return redirect('/')
 
+
+class ColetaPacienteController(MethodView):
+    def get(self):
+        return "Esta será a página de Coletas"
