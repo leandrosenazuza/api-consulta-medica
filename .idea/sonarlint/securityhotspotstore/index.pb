@@ -496,3 +496,11 @@ O
 src/templates/public/index.html,b\3\b357c0207397b0c2d1cf8bd748d3b5c42fb8cfa3
 P
  src/templates/public/update.html,4\9\49dcf99b80f5fe9cc5281ba5186c195611028be8
+P
+ src/templates/public/coleta.html,7\2\72bfb32d7c2d31ab0cda8cc97ad84960b19da49a
+O
+src/templates/partials/msg.html,b\4\b47f17f51f60c5fd23d4925a625323ce23b6a246
+O
+src/templates/partials/nav.html,2\0\209bbcc7d7655b93dc79c30138f10fb0dcc998c1
+H
+src/static/css/style.css,5\2\5278550501a4adda3a484630a3bd48f734aba3b4

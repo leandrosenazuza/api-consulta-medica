@@ -1,5 +1,5 @@
 from flask.views import MethodView
-from flask import request, render_template, redirect
+from flask import request, render_template, redirect, flash
 
 from src.db import mysql
 
@@ -9,8 +9,11 @@ class IndexController(MethodView):
         with mysql.cursor() as cur:
             cur.execute("SELECT * FROM sys.TAB_PACIENTES")
             data = cur.fetchall()
-            print(data)
-        return render_template('public/index.html', data=data);
+
+            cur.execute("SELECT * FROM sys.TAB_COLETA_PACIENTE")
+            dataColeta = cur.fetchall()
+
+        return render_template('public/index.html', data=data, dataColeta=dataColeta);
 
     def post(self):
         codigoPaciente = request.form['codigoPaciente'],
@@ -21,8 +24,12 @@ class IndexController(MethodView):
         codigoColetaPaciente = request.form['codigoColetaPaciente']
 
         with mysql.cursor()as cur:
-            cur.execute("INSERT INTO sys.TAB_PACIENTES(codigoPaciente, CPF,nome,dataNascimento,idade,codigoColetaPaciente) VALUES(%s, %s, %s, %s, %s, %s)",(codigoPaciente, CPF,nome,dataNascimento,idade,codigoColetaPaciente))
-            cur.connection.commit()
+            try:
+                cur.execute("INSERT INTO sys.TAB_PACIENTES(codigoPaciente, CPF,nome,dataNascimento,idade,codigoColetaPaciente) VALUES(%s, %s, %s, %s, %s, %s)",(codigoPaciente, CPF,nome,dataNascimento,idade,codigoColetaPaciente))
+                cur.connection.commit()
+                flash('Paciente cadastrado com sucesso!', 'sucess')
+            except:
+                flash('Este paciente não foi cadastrado!', 'error')
             return redirect('/')
 
 class DeletePacienteController(MethodView):
@@ -40,7 +47,6 @@ class UpdatePacienteController(MethodView):
         return render_template('public/update.html', paciente=paciente)
 
     def post(self,code):
-        codigoPaciente = request.form['codigoPaciente'],
         CPF = request.form['CPF'],
         nome = request.form['nome'],
         dataNascimento = request.form['dataNascimento'],
@@ -48,11 +54,11 @@ class UpdatePacienteController(MethodView):
         codigoColetaPaciente = request.form['codigoColetaPaciente']
 
         with mysql.cursor() as cur:
-            cur.execute("UPDANTE sys.TAB_PACIENTES SET codigoPaciente=%S, CPF=%S, nome=%S, dataNascimento=%S, idade=%S,codigoColetaPaciente=%s WHERE code =%s", (codigoPaciente, CPF, nome, dataNascimento, idade, codigoColetaPaciente))
+            cur.execute("UPDATE sys.TAB_PACIENTES SET CPF=%s, nome=%s, dataNascimento=%s, idade=%s,codigoColetaPaciente=%s WHERE codigoPaciente =%s", (CPF, nome, dataNascimento, idade, codigoColetaPaciente, code))
             cur.connection.commit()
             return redirect('/')
 
 
 class ColetaPacienteController(MethodView):
     def get(self):
-        return "Esta será a página de Coletas"
+        return render_template("public/coleta.html")
