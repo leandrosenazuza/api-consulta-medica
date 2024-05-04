@@ -1,25 +1,23 @@
-{ % with success = get_flashed_messages(category_filter=["success"]) % }
-    { % if success % }
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {% for message in sucess %}
-                <strong>Resposta!</strong>
-                <i class="fas fa-solid fa-check-double">{{message}}</i>
-            {% endfor %}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    { % endif % }
-{ % endwith % }
-
-{ % with error = get_flashed_messages(category_filter=["error"]) % }
-{ % if error % }
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    {% for message in error %}
+{% with success = get_flashed_messages(category_filter=["success"]) %}
+{% if success %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {% for message in success %}
     <strong>Resposta!</strong>
-    <i class="fas fa-solid fa-xmark">{{message}}</i>
+    <i class="fas fa-check-double"></i> {{ message }}
     {% endfor %}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-{ % endif % }
-{ % endwith % }
+{% endif %}
+{% endwith %}
 
-
+{% with error = get_flashed_messages(category_filter=["error"]) %}
+{% if error %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {% for message in error %}
+    <strong>Resposta!</strong>
+    <i class="fas fa-xmark"></i> {{ message }}
+    {% endfor %}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+{% endwith %}
