@@ -13,11 +13,41 @@
     <button type="submit">Cadastrar</button>
 
 </form>
+{% if data %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF<th>
+                <th>Atualizar</th>
+                <th>Apagar</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for paciente in data %}
+            <tr>
+                <td>{{paciente.3}}</td>
+                <td>{{paciente.2}} </td>
+                <td>
+                    <form action="/delete/paciente/{{paciente.0}}" method="post">
+                        <button>Apagar</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/update/paciente/{{paciente.0}}">
+                        <button>Atualizar</button>
+                    </form>
+                    {% else %}
+                    Não há paciente cadastrado com esse ID.
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
 
-    {% for pacientes in data %}
-        {{pacientes.codigoPaciente}}
-        {{pacientes.CPF}}
-    {% endfor %}
+{% else %}
+<p>Nenhum paciente encontrado!</p>
+{% endif%}
 
 {% endblock %}
 

@@ -9,6 +9,7 @@ class IndexController(MethodView):
         with mysql.cursor() as cur:
             cur.execute("SELECT * FROM sys.TAB_PACIENTES")
             data = cur.fetchall()
+            print(data)
         return render_template('public/index.html', data=data);
 
     def post(self):
@@ -25,16 +26,29 @@ class IndexController(MethodView):
             return redirect('/')
 
 class DeletePacienteController(MethodView):
-    def get(self, code):
+    def post(self, code):
         with mysql.cursor()as cur:
-            cur.execute("DELETE FROM sys.TAB_PACIENTES WHERE codigoPaciente=%s)", code)
+            cur.execute("DELETE FROM sys.TAB_PACIENTES WHERE codigoPaciente=%s", code)
             cur.connection.commit()
         return redirect('/')
 
 class UpdatePacienteController(MethodView):
-    def get(self, code):
+    def post(self, code):
         with mysql.cursor()as cur:
-        #    cur.execute("UPDATE FROM TAB_PACIENTES SET CPF = %s, nome = %s, dataNascimento = %s, idade = %s, codigoColetaPaciente = %s WHERE codigoPaciente = %s", (CPF, nome, dataNascimento, idade, codigoPaciente))
+            cur.execute("SELECT * FROM sys.TAB_PACIENTES WHERE codigoPaciente=%s", code)
+            paciente = cur.fetchone(code)
+        return redirect('public/update.html', paciente=paciente)
+
+    def post(self,code):
+        pacienteCode = request.form['codigoPaciente'],
+        CPF = request.form['CPF'],
+        nome = request.form['nome'],
+        dataNascimento = request.form['dataNascimento'],
+        idade = request.form['idade'],
+        codigoColetaPaciente = request.form['codigoColetaPaciente']
+
+        with mysql.cursor() as cur:
+            cur.execute("UPDANTE sys.TAB_PACIENTES SET codigoPaciente=%S, CPF=%S, nome=%S, dataNascimento=%S, idade=%S,codigoColetaPaciente=%S WHERE code =%S", (pacienteCode, CPF, nome, dataNascimento, idade, codigoColetaPaciente))
             cur.connection.commit()
-        return redirect('/')
+            return redirect('/')
 

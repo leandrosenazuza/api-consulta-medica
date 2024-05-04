@@ -494,3 +494,5 @@ G
 src/templates/base.html,5\3\53d43689e8f59a96532a4b7fefe5b3fe7dfbe2e3
 O
 src/templates/public/index.html,b\3\b357c0207397b0c2d1cf8bd748d3b5c42fb8cfa3
+P
+ src/templates/public/update.html,4\9\49dcf99b80f5fe9cc5281ba5186c195611028be8

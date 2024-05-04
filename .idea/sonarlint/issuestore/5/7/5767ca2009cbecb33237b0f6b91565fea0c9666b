@@ -1,4 +1,8 @@
 
-©python:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8²óààó1J$aa5a07d8-6e49-4aa9-baf3-aa782614d9bd
-£python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘àø8²óààó1J$f8964c5b-147f-45f0-b244-233b6ad99262
-¨python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8²óààó1J$60b4342a-b040-4e47-9f60-29e6640cfd66
+©python:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8ôĞÛ˜ô1J$8ceb5471-b4f8-4f36-906a-5214ecb0111f
+£python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘àø8üĞÛ˜ô1J$b63ec549-61e4-4b5f-bae0-287f959f4110
+¨python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8‚ÑÛ˜ô1J$e5463966-5c79-489c-b171-442fc6105856
+zpython:S930("1Remove this unexpected named argument 'paciente'.(³¶Şùÿÿÿÿ8ƒÑÛ˜ô1J$5e6ea150-8e74-4e35-a609-e1bc4007fd73
+©python:S1170"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(œşØë8…ÑÛ˜ô1J$9d6bf8ec-e5e0-44c6-a66c-ea5271d405d0
+¨python:S117."_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(İÆÌùÿÿÿÿ8…ÑÛ˜ô1J$cf1654f3-5424-435c-9836-26bf115cfae3
+¦python:S117+"]Rename this local variable "pacienteCode" to match the regular expression ^[_a-z][a-z0-9_]*$.(‡Äñÿÿÿÿÿ8İ˜ô1J$5e9ac0db-8110-42dc-98dc-a2ffd76b7784
