@@ -23,8 +23,8 @@
 
             <div class="footer-image-container-right">
                 <a href="https://www.salesoliveira.sp.gov.br/" target="_blank">
-                    <img src="https://brasao.org/wp-content/uploads/2018/08/brasao-estado-de-sao-paulo.png"
-                         alt="Brasão do Estado de São Paulo" style="height: 80px;">
+                    <img src="https://scontent.fuba2-1.fna.fbcdn.net/v/t39.30808-6/261220036_276539434416353_2001584621257367569_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VfEFG0IYfJMQ7kNvgE4mJCN&_nc_ht=scontent.fuba2-1.fna&oh=00_AfASk_PLyof6vLXovGJC1AskwspkKICiUbs6kmx-rlVxxg&oe=663DB732"
+                         alt="Brasão do Estado de São Paulo" style="height: 100px;">
                 </a>
             </div>
         </div>
@@ -59,57 +59,37 @@
             </div>
             <div class="modal-body mx-3">
                 <form action="/create/paciente/" method="POST">
-                    <!--<form action="/" method="POST">
-                        <input type="number" name="codigoPaciente" placeholder="Código do Paciente">
-                        <input type="text" name="nome" placeholder="Nome Completo do Paciente">
-                        <input type="text" name="CPF" placeholder="CPF do Paciente">
-                        <input type="text" name="dataNascimento" placeholder="Data de Nascimento">
-                        <input type="number" name="idade" placeholder="Idade do Paciente">
-                        <input type="number" name="codigoColetaPaciente" placeholder="Código de Coleta do Paciente">
-                        <button type="submit">Cadastrar</button>
-                    </form>
-                    -->
                     <div class="md-form mb-5">
                         <i class="fas fa-brands fa-hashnode prefix grey-text"></i>
                         <input type="number" name="codigoPaciente" placeholder="Código do Paciente"
                                class="form-control validate">
-                        <label data-error="wrong" data-success="right">Última coleta</label>
+                        <label data-error="wrong" data-success="right">Código</label>
                     </div>
 
                     <div class="md-form mb-5">
                         <i class="fas fa-solid fa-person prefix grey-text"></i>
                         <input type="text" name="nome" class="form-control validate">
-                        <label data-error="wrong" data-success="right">Nome Completo do Paciente</label>
+                        <label data-error="wrong" data-success="right">Nome</label>
                     </div>
 
                     <div class="md-form mb-5">
                         <i class="fa-solid fa-id-card prefix grey-text"></i>
                         <input type="text" name="CPF" id="cpfInput" class="form-control">
-                        <label data-error="wrong" data-success="right">CPF do Paciente</label>
+                        <label data-error="wrong" data-success="right">CPF</label>
                     </div>
 
                     <div class="md-form mb-5">
                         <i class="fa-solid fa-calendar-days prefix grey-text"></i>
-                        <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" >
-                        <label data-error="wrong" data-success="right">Data de Nascimento</label>
+                        <input type="text" name="dataNascimento" id="dataNascimento" class="form-control" >
+                        <label data-error="wrong" data-success="right">Nascimento</label>
                     </div>
 
-                   <!-- <div class="row">
-                        <div class="col-md-6">
-                            <div class="md-form mb-5">
-                                <i class="fa-solid fa-calendar-days prefix grey-text"></i>
-                                <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" >
-                                <label data-error="wrong" data-success="right">Data de Nascimento</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="md-form mb-5">
-                                <i class="fa-solid fa-calendar-check prefix grey-text"></i>
-                                <input type="number" name="idade" class="form-control" readonly>
-                                <label data-error="wrong" data-success="right">Idade</label>
-                            </div>
-                        </div>
-                    </div>-->
+                    <div class="md-form mb-5">
+                        <i class="fas fa-brands fa-hashnode prefix grey-text"></i>
+                        <input type="number" name="codigoColetaPaciente" placeholder="Código de Coleta"
+                               class="form-control validate">
+                        <label data-error="wrong" data-success="right">Coleta</label>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
