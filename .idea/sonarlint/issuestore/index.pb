@@ -504,3 +504,7 @@ O
 src/templates/partials/nav.html,2\0\209bbcc7d7655b93dc79c30138f10fb0dcc998c1
 H
 src/static/css/style.css,5\2\5278550501a4adda3a484630a3bd48f734aba3b4
+R
+"src/templates/partials/footer.html,5\b\5b980dd978dbfa44c7f548fde33fd8b22c0ed601
+[
++src/templates/public/cadastrarPaciente.html,c\1\c1a34a7910b6746c3f89637a71326e3863f561d9

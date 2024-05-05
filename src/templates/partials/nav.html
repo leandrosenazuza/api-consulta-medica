@@ -1,11 +1,12 @@
 <nav class="navbar sticky-top navbar-light bg-light scrolling-navbar">
     <div class="container-fluid">
+
         <a class="navbar-brand" href="/">Sistema de Controle de Exames</a>
         <div class="navbar-nav ml-auto">
-            <button class="btn btn-success btn-sm"
+            <button class="btn btn-info"
                     data-toggle="modal"
                     data-target="#modalForm"
-            >Adicionar Paciente <i class="fas fa-solid fa-square-plus"></i></button>
+            ><i class="fa-solid fa-user-plus fa-lg"></i> </button>
         </div>
     </div>
 </nav>
@@ -14,16 +15,26 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold"> Cadastrar Exame</h4>
+                <h4 class="modal-title w-100 font-weight-bold"> Cadastrar Paciente</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body mx-3">
-                <form action="/coleta/create/" method="POST">
+                <form action="/create/paciente/" method="POST">
+                    <!--<form action="/" method="POST">
+                        <input type="number" name="codigoPaciente" placeholder="Código do Paciente">
+                        <input type="text" name="nome" placeholder="Nome Completo do Paciente">
+                        <input type="text" name="CPF" placeholder="CPF do Paciente">
+                        <input type="text" name="dataNascimento" placeholder="Data de Nascimento">
+                        <input type="number" name="idade" placeholder="Idade do Paciente">
+                        <input type="number" name="codigoColetaPaciente" placeholder="Código de Coleta do Paciente">
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                    -->
                     <div class="md-form mb-5">
                         <i class="fas fa-id-card prefix grey-text"></i>
-                        <input type="text" name="ultimaColeta" class="form-control validate">
+                        <input type="number" name="codigoPaciente" placeholder="Código do Paciente"  class="form-control validate">
                         <label data-error="wrong" data-success="right">Última coleta</label>
                     </div>
 

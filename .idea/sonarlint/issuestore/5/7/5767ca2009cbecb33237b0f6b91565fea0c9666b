@@ -1,8 +1,14 @@
 
-~python:S117"[Rename this local variable "dataColeta" to match the regular expression ^[_a-z][a-z0-9_]*$.(’τΝωÿÿÿÿ8αφΟ¥τ1
-ƒpython:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(ώΨλ8αφΟ¥τ1
-}python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘ΰψ8αφΟ¥τ1
-‚python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(έΖΜωÿÿÿÿ8αφΟ¥τ1
-[python:S5754"<Specify an exception class to catch or reraise the exception(ΚΙ·8γφΟ¥τ1
-ƒpython:S1176"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(ώΨλ8γφΟ¥τ1
-‚python:S1174"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(έΖΜωÿÿÿÿ8γφΟ¥τ1
+~python:S117"[Rename this local variable "dataColeta" to match the regular expression ^[_a-z][a-z0-9_]*$.(’τΝωÿÿÿÿ8ίγι΄τ1
+ƒpython:S117"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(ώΨλ8ίγι΄τ1
+}python:S117"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘ΰψ8ίγι΄τ1
+‚python:S117"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(έΖΜωÿÿÿÿ8ίγι΄τ1
+[python:S5754!"<Specify an exception class to catch or reraise the exception(ΚΙ·8ίγι΄τ1
+ƒpython:S117:"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(ώΨλ8ίγι΄τ1
+‚python:S1178"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(έΖΜωÿÿÿÿ8ίγι΄τ1
+ƒpython:S117K"eRename this local variable "codigoColetaPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(ώΨλ8ίγι΄τ1
+}python:S117F"_Rename this local variable "codigoPaciente" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘ΰψ8ίγι΄τ1
+‚python:S117I"_Rename this local variable "dataNascimento" to match the regular expression ^[_a-z][a-z0-9_]*$.(έΖΜωÿÿÿÿ8ίγι΄τ1
+[python:S5754T"<Specify an exception class to catch or reraise the exception(ΚΙ·8ίγι΄τ1
+python:S117c"cRename this local variable "pacientesFiltrados" to match the regular expression ^[_a-z][a-z0-9_]*$.(πΆπΣ8ίγι΄τ1
+„python:S117a"aRename this local variable "parteNomeBuscado" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ζ—χªώÿÿÿÿ8ίγι΄τ1

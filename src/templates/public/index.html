@@ -3,39 +3,93 @@
 {% block title %} Pessoas cadastradas no sistema de Exames {% endblock %}
 
 {% block content %}
-<div id="main">
+<div id="main" >
     <div class="container">
         <div class="row g-0">
-            <div class="col-lg-6 d-flex">
+            <div class="col-lg-12 d-flex">
                 <div id="content-main" class="justify-content-center align-self-center mx-auto my-5">
                     <div class="card">
                         <div class="card-header text-center">
                             Consulta de Paciente
                         </div>
                         <div class="card-body">
-                            <div action="/" method="POST" class="p-10">
-
+                            <form action="/get/paciente/{{ nomePacienteDigitado }}" method="GET" class="p-10">
                                 <div class="md-form row">
                                     <div class="col">
-                                        <input type="number" name="code" class="form-control" id="codeInput" autofocus>
-                                        <label for="codeInput">ID do Paciente</label>
+                                        <input type="text" name="nomePaciente" class="form-control" id="codeInput" autofocus>
+                                        <label for="codeInput">Nome do Paciente</label>
                                     </div>
                                     <div class="col">
-                                        <input type="text" name="code" class="form-control" id="nomeInput" autofocus>
-                                        <label for="nomeInput">Nome do Paciente</label>
+                                        <button type="submit" class="btn btn-primary btn-fixed"> Buscar <i class="fa-solid fa-magnifying-glass"></i></button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 
+{% if pacientesFiltrados %}
+<div id="renderizados" >
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-12 d-flex">
+                <div id="content-renderizados" class="justify-content-center align-self-center mx-auto my-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            Resultados da busca de Paciente
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Nascimento</th>
+                                    <th colspan="3">Ação</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for paciente in pacientesFiltrados %}
+                                <tr>
+                                    <td>{{paciente.2}}</td>
+                                    <td>{{paciente.1}}</td>
+                                    <td>{{paciente.3}}</td>
+                                    <td>
+                                        <form action="/" method="post">
+                                            <button type="submit" class="btn btn-success btn-fixed"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <a href="/update/paciente/{{ paciente.0 }}">
+                                            <button type="button" class="btn btn-primary btn-fixed">Editar <i class="fa-solid fa-file-signature"></i></button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <form action="/delete/paciente/{{ paciente.0 }}" method="post">
+                                            <button type="submit" class="btn btn-danger btn-fixed">Apagar <i class="fa-solid fa-file-circle-xmark"></i></button>
+                                        </form>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+<!--
 <form action="/" method="POST">
     <input type="number" name="codigoPaciente" placeholder="Código do Paciente">
     <input type="text" name="nome" placeholder="Nome Completo do Paciente">
@@ -45,21 +99,24 @@
     <input type="number" name="codigoColetaPaciente" placeholder="Código de Coleta do Paciente">
     <button type="submit">Cadastrar</button>
 </form>
-{% if data %}
+
+
 <table>
     <thead>
     <tr>
         <th>Nome</th>
         <th>CPF</th>
-        <th colspan="2">Ação</th>
+        <th>Nascimneto</th>
+        <th colspan="3">Ação</th>
 
     </tr>
     </thead>
     <tbody>
     {% for paciente in data %}
     <tr>
-        <td>{{paciente.3}}</td>
+        <td>{{paciente.1}}</td>
         <td>{{paciente.2}}</td>
+        <td>{{paciente.3}}</td>
         <td>
             <a href="/update/paciente/{{ paciente.0 }}">
                 <button>Atualizar</button>
@@ -96,9 +153,6 @@
     {% endfor %}
 </table>
 
-{% else %}
-<p>Nenhum paciente encontrado!</p>
-{% endif%}
-
+-->
 {% endblock %}
 
