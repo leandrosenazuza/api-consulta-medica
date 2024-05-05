@@ -3,7 +3,6 @@ from flask import request, render_template, redirect, flash
 
 from src.db import mysql
 
-
 class IndexController(MethodView):
     def get(self):
         with mysql.cursor() as cur:
