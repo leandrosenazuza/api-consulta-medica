@@ -1,13 +1,41 @@
 <div class="collapse" id="expansivel">
-    <div class="bg-dark p-4">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+    <div class="bg-light p-4">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <div class="footer-image-container-left">
+                <a href="https:univesp.br/" target="_blank">
+                    <img src="https://univesp.br/sites/58f6506869226e9479d38201/theme/images/logo-univesp.png?1643802139"
+                         alt="Imagem Univesp" style="height: 60px;">
+                </a>
+            </div>
+
+            <div class="footer-center-text" style="margin: 10px">
+                <h4 class="text-white" style="font-weight: bold; text-align: center">Projeto Integrador Univesp</h4>
+                <span class="text-muted">
+                     <ul>
+                        <li>O presente sistema tem por função disponibilizar uma API de consulta para todos os registros de pessoas que realizaram o exame de Papanicolau no Sistema de Saúde Única de Sales de Oliveira - SP.</li>
+                        <li>Integrantes: Leandro Sena Zuza (23201180), José Roberto Girotto Júnior (2207701), Isaac da Silva Gonçalves (2222698), Rodrigo Alves Pianta (2211314), Ismael Urbinati (2103458), Mateus Verdun Ferrareze (2209291), Dirceu Lopes dos Santos Junior (2213964).</li>
+                        <li>Orientadora: Prof. Dr. Marcela Paschoal Perpétuo</li>
+                    </ul>
+                </span>
+            </div>
+
+
+            <div class="footer-image-container-right">
+                <a href="https://www.salesoliveira.sp.gov.br/" target="_blank">
+                    <img src="https://brasao.org/wp-content/uploads/2018/08/brasao-estado-de-sao-paulo.png"
+                         alt="Brasão do Estado de São Paulo" style="height: 80px;">
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
+
 <nav class="navbar sticky-top navbar-light bg-light scrolling-navbar">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#expansivel" aria-expanded="true" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#expansivel"
+                aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="/">Sistema de Controle de Exames</a>
@@ -15,7 +43,7 @@
             <button class="btn btn-info"
                     data-toggle="modal"
                     data-target="#modalForm"
-            ><i class="fa-solid fa-user-plus fa-lg"></i> </button>
+            ><i class="fa-solid fa-user-plus fa-lg"></i></button>
         </div>
     </div>
 </nav>
@@ -43,13 +71,14 @@
                     -->
                     <div class="md-form mb-5">
                         <i class="fas fa-id-card prefix grey-text"></i>
-                        <input type="number" name="codigoPaciente" placeholder="Código do Paciente"  class="form-control validate">
+                        <input type="number" name="codigoPaciente" placeholder="Código do Paciente"
+                               class="form-control validate">
                         <label data-error="wrong" data-success="right">Última coleta</label>
                     </div>
 
                     <div class="md-form mb-5">
                         <i class="fas fa-id-card prefix grey-text"></i>
-                        <input type="text" name="proximaColeta"class="form-control validate">
+                        <input type="text" name="proximaColeta" class="form-control validate">
                         <label data-error="wrong" data-success="right">Próxima coleta</label>
                     </div>
                 </form>
