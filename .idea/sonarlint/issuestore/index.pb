@@ -508,3 +508,7 @@ R
 "src/templates/partials/footer.html,5\b\5b980dd978dbfa44c7f548fde33fd8b22c0ed601
 [
 +src/templates/public/cadastrarPaciente.html,c\1\c1a34a7910b6746c3f89637a71326e3863f561d9
+S
+#src/templates/partials/sideNav.html,0\b\0b69b65b2e565b37db6cf41b6030c2567e9b46a2
+G
+src/static/js/script.js,8\1\81e0048738836de833cb87bc131da666f496837a

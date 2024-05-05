@@ -37,7 +37,7 @@ table th, table td {
 }
 
 body {
-    background-color: rgb(177, 175, 174);
+    background-color: #f3eae8;
 }
 
 .btn-link {
@@ -65,5 +65,12 @@ body {
     padding: 10px 20px;
     height: 60px;
 
+}
+
+
+.card-header{
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgb(177, 175, 174);
 }
 
