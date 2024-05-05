@@ -70,17 +70,46 @@
                     </form>
                     -->
                     <div class="md-form mb-5">
-                        <i class="fas fa-id-card prefix grey-text"></i>
+                        <i class="fas fa-brands fa-hashnode prefix grey-text"></i>
                         <input type="number" name="codigoPaciente" placeholder="Código do Paciente"
                                class="form-control validate">
                         <label data-error="wrong" data-success="right">Última coleta</label>
                     </div>
 
                     <div class="md-form mb-5">
-                        <i class="fas fa-id-card prefix grey-text"></i>
-                        <input type="text" name="proximaColeta" class="form-control validate">
-                        <label data-error="wrong" data-success="right">Próxima coleta</label>
+                        <i class="fas fa-solid fa-person prefix grey-text"></i>
+                        <input type="text" name="nome" class="form-control validate">
+                        <label data-error="wrong" data-success="right">Nome Completo do Paciente</label>
                     </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fa-solid fa-id-card prefix grey-text"></i>
+                        <input type="text" name="CPF" id="cpfInput" class="form-control">
+                        <label data-error="wrong" data-success="right">CPF do Paciente</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fa-solid fa-calendar-days prefix grey-text"></i>
+                        <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" >
+                        <label data-error="wrong" data-success="right">Data de Nascimento</label>
+                    </div>
+
+                   <!-- <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-5">
+                                <i class="fa-solid fa-calendar-days prefix grey-text"></i>
+                                <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" >
+                                <label data-error="wrong" data-success="right">Data de Nascimento</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-5">
+                                <i class="fa-solid fa-calendar-check prefix grey-text"></i>
+                                <input type="number" name="idade" class="form-control" readonly>
+                                <label data-error="wrong" data-success="right">Idade</label>
+                            </div>
+                        </div>
+                    </div>-->
                 </form>
             </div>
             <div class="modal-footer">
@@ -90,3 +119,5 @@
         </div>
     </div>
 </div>
+
+
