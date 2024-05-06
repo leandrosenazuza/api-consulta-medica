@@ -10,18 +10,17 @@
                 <div id="content-main" class="justify-content-center align-self-center mx-auto my-5">
                     <div class="card">
                         <div class="card-header text-center">
-                            Consulta de Paciente
+                            Consulta de Paciente <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" >
                             <form action="/get/paciente/{{ nomePacienteDigitado }}" method="GET" class="p-10">
+                                <p style="text-align: start">Digite o <b>nome</b> ou <b>parte do nome</b> do Paciente buscado</p>
                                 <div class="md-form row">
-                                    <div class="col">
-                                        <input type="text" name="nomePaciente" class="form-control" id="codeInput" autofocus>
-                                        <label for="codeInput">Nome do Paciente</label>
+                                    <div class="col" >
+
+                                        <input type="text" name="nomePaciente" class="form-control">
                                     </div>
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-primary btn-fixed"> Buscar <i class="fa-solid fa-magnifying-glass"></i></button>
-                                    </div>
+                                        <button type="submit" class="btn btn-primary btn-fixed"> Buscar </button>
                                 </div>
                             </form>
                         </div>
