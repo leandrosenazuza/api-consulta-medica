@@ -58,11 +58,11 @@
                 </button>
             </div>
             <div class="modal-body mx-3">
-                <form action="/create/paciente/" method="POST">
+                <form action="/paciente/create/" method="POST">
                     <div class="md-form mb-5">
                         <i class="fas fa-brands fa-hashnode prefix grey-text"></i>
                         <input type="number" name="codigoPaciente" placeholder="Código do Paciente"
-                               class="form-control validate">
+                               class="form-control">
                         <label data-error="wrong" data-success="right">Código</label>
                     </div>
 
@@ -87,14 +87,14 @@
                     <div class="md-form mb-5">
                         <i class="fas fa-brands fa-hashnode prefix grey-text"></i>
                         <input type="number" name="codigoColetaPaciente" placeholder="Código de Coleta"
-                               class="form-control validate">
+                               class="form-control">
                         <label data-error="wrong" data-success="right">Coleta</label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
         </div>
     </div>

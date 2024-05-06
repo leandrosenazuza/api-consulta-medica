@@ -510,5 +510,5 @@ R
 +src/templates/public/cadastrarPaciente.html,c\1\c1a34a7910b6746c3f89637a71326e3863f561d9
 G
 src/static/js/script.js,8\1\81e0048738836de833cb87bc131da666f496837a
-H
-src/static/js/scripts.js,f\7\f716304ac0d0236880ba951c6b1c516e68345722
+I
+src/static/images/fav.svg,f\9\f924581e013b40a53723850366915367b2f0eaae
