@@ -11,8 +11,6 @@ class ColetaPaciente(Base):
     ultimaColeta = Column(Date)
     proximaColeta = Column(Date)
 
-    # Definindo o relacionamento com a classe Paciente
-    pacientes = relationship('Paciente', back_populates='coleta_paciente')
 
     def __repr__(self):
         return f"<ColetaPaciente {self.codigoColetaPaciente}>"

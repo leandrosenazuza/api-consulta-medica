@@ -2,13 +2,15 @@ from flask.views import MethodView
 from flask import request, render_template, redirect, flash
 
 from src import db
+from src.db import session
 from src.model.ColetaPaciente import ColetaPaciente
 from src.model.Paciente import Paciente
 
 class IndexController(MethodView):
     def get(self):
-        data = Paciente.query.all()  # Consulta todos os pacientes
-        dataColeta = ColetaPaciente.query.all()  # Consulta todas as coletas de pacientes
+        data = session.query(Paciente).all()
+        dataColeta = session.query(ColetaPaciente).all()
+        #dataColeta = ColetaPaciente.query.all()
         return render_template('public/index.html', data=data, dataColeta=dataColeta)
 
     def post(self):
@@ -31,6 +33,7 @@ class IndexController(MethodView):
             # Adicionar o novo paciente ao banco de dados
             db.session.add(novo_paciente)
             db.session.commit()
+
             flash('Paciente cadastrado com sucesso!', 'success')
         except Exception as e:
             # Reverter a transação em caso de erro
@@ -43,7 +46,7 @@ class IndexController(MethodView):
 
 class DeletePacienteController(MethodView):
     def post(self, code):
-        paciente = Paciente.query.get(code)
+        paciente = session.query(Paciente).get(code)
         if paciente:
             db.session.delete(paciente)
             db.session.commit()
@@ -51,11 +54,11 @@ class DeletePacienteController(MethodView):
 
 class UpdatePacienteController(MethodView):
     def get(self, code):
-        paciente = Paciente.query.get(code)
+        paciente = session.query(Paciente).get(code)
         return render_template('public/update.html', paciente=paciente)
 
     def post(self, code):
-        paciente = Paciente.query.get(code)
+        paciente = session.query(Paciente).get(code)
         if paciente:
             paciente.CPF = request.form['CPF']
             paciente.nome = request.form['nome']
@@ -98,7 +101,7 @@ class ColetaPacienteController(MethodView):
 class GetPacienteController(MethodView):
     def get(self):
         parteNomeBuscado = request.args.get('nomePaciente')
-        pacientesFiltrados = Paciente.query.filter(Paciente.nome.like(f'%{parteNomeBuscado}%')).all()
+        pacientesFiltrados = session.query(Paciente).filter(Paciente.nome.like(f'%{parteNomeBuscado}%')).all()
         return render_template('public/index.html', pacientesFiltrados=pacientesFiltrados)
 
 

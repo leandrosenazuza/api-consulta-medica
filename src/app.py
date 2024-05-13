@@ -2,13 +2,13 @@ import os
 
 from flask import Flask, send_from_directory
 
-from src.controllers.controller import *
+from src.controllers.controller import IndexController, DeletePacienteController, UpdatePacienteController, \
+    CreatePacienteController, GetPacienteController
 
 app = Flask(__name__)
 app.config.from_mapping(
     SECRET_KEY = 'development'
 )
-
 
 rotasConfiguradas = {
     "index_route": "/", "index_controller": IndexController.as_view("index"),
