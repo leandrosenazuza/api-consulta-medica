@@ -89,7 +89,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exameModalLabel{{ paciente.codigoPaciente }}">Realizar Exame para {{ paciente.nome }}</h5>
+                <h5 class="modal-title" id="exameModalLabel{{ paciente.codigoPaciente }}">Realizar Exame para {{ paciente.codigoColetaPaciente }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -107,28 +107,46 @@
 </div>
 {% endfor %}
 
-<!-- Modal para editar informações do paciente -->
+=
 {% for paciente in pacientesFiltrados %}
 <div class="modal fade" id="editarModal{{ paciente.codigoPaciente }}" tabindex="-1" role="dialog" aria-labelledby="editarModalLabel{{ paciente.codigoPaciente }}" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editarModalLabel{{ paciente.codigoPaciente }}">Editar Informações de {{ paciente.nome }}</h5>
+                <h5 class="modal-title" id="editarModalLabel{{ paciente.codigoPaciente }}">Editar Informações de {{ paciente.nome }} </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Formulário para editar informações do paciente -->
-                <form action="/editar_paciente/{{ paciente.codigoPaciente }}" method="POST">
-                    <!-- Campos do formulário para editar informações -->
-                    <!-- ... -->
-                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                <form action="/update/paciente/{{ paciente.codigoPaciente }}" method="POST">
+                    <div class="form-group">
+                        <label for="codigoPaciente">Código do Paciente</label>
+                        <input type="number" class="form-control" id="codigoPaciente" name="codigoPaciente" value="{{ paciente.codigoPaciente }}" placeholder="Código do Paciente" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="CPF">CPF do Paciente</label>
+                        <input type="text" class="form-control cpf-mask" id="CPF" name="CPF" value="{{ paciente.CPF }}" placeholder="CPF do Paciente">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo do Paciente</label>
+                        <input type="text" maxlength="60" class="form-control" id="nome" name="nome" value="{{ paciente.nome }}" placeholder="Nome Completo do Paciente">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="text" maxlength="10" class="form-control" id="dataNascimento" name="dataNascimento" value="{{ paciente.dataNascimento }}" placeholder="Data de Nascimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="codigoColetaPaciente">Código de Coleta do Paciente</label>
+                        <input type="number" class="form-control" id="codigoColetaPaciente" name="codigoColetaPaciente" value="{{ paciente.codigoColetaPaciente }}" placeholder="Código de Coleta do Paciente" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Atualizar</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 {% endfor %}
+
 
 {% endblock %}
