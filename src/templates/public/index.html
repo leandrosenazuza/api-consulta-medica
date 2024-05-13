@@ -100,6 +100,7 @@
                     <div class="form-group">
                         <label for="coletaAnos">Coletas Efetuadas</label>
                         <input type="text" class="form-control" id="coletaAnos" name="coletaAnos" value="{% if paciente.coleta %}{{ paciente.coleta.coletaAnos }}{% endif %}" placeholder="Sequência de Coletas Efetuadas">
+                        <small id="coletaAnosHelp" class="form-text text-muted">Insira os anos das coletas no formato [ano1, ano2, ano3, ...]</small>
                     </div>
                     <div class="form-group">
                         <label for="ultimaColeta">Última Coleta Efetuada</label>

@@ -16,17 +16,18 @@ $(document).ready(function() {
 });
 
 
-    // Fazer solicitação AJAX para obter informações da coleta
-    $.ajax({
-    url: "/coleta/{{ paciente.codigoColetaPaciente }}",
-    method: "GET",
-    success: function(data) {
-        // Preencher os campos do formulário com os dados da coleta
-        $("#coletaAnos{{ paciente.codigoColetaPaciente }}").val(data.coletaAnos);
-        $("#ultimaColeta{{ paciente.codigoColetaPaciente }}").val(data.ultimaColeta);
-        $("#proximaColeta{{ paciente.codigoColetaPaciente }}").val(data.proximaColeta);
-    },
-    error: function(xhr, status, error) {
-        console.error("Erro ao obter informações da coleta:", error);
+const coletaAnosInput = document.getElementById('coletaAnos');
+
+// Adiciona um evento de "keyup" para verificar o valor inserido no input
+coletaAnosInput.addEventListener('keyup', function() {
+    const inputValue = coletaAnosInput.value.trim(); // Remove espaços em branco do início e do fim
+
+    // Verifica se o valor inserido corresponde ao formato esperado [ano1, ano2, ano3, ...]
+    const regex = /^\[\d{4}(,\s?\d{4})*\]$/;
+    const isValid = regex.test(inputValue);
+
+    // Se o valor não corresponder ao formato esperado, limpa o campo
+    if (!isValid) {
+        coletaAnosInput.value = '';
     }
 });

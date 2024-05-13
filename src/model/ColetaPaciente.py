@@ -7,7 +7,7 @@ class ColetaPaciente(Base):
     __tablename__ = 'TAB_COLETA_PACIENTE'
 
     codigoColetaPaciente = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    coletaAnos = Column(JSON, nullable=False)
+    coletaAnos = Column(JSON, default=[])
     ultimaColeta = Column(Date)
     proximaColeta = Column(Date)
 

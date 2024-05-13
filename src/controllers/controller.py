@@ -1,3 +1,5 @@
+from uuid import uuid4
+
 from flask.views import MethodView
 from flask import request, render_template, redirect, flash
 
@@ -68,23 +70,22 @@ class UpdatePacienteController(MethodView):
 
 class CreatePacienteController(MethodView):
     def post(self):
-        codigoPaciente = request.form['codigoPaciente']
         CPF = request.form['CPF']
         nome = request.form['nome']
         dataNascimento = request.form['dataNascimento']
-        codigoColetaPaciente = request.form['codigoColetaPaciente']
-
-        novo_paciente = Paciente(
-            codigoPaciente=codigoPaciente,
-            CPF=CPF,
-            nome=nome,
-            dataNascimento=dataNascimento,
-            codigoColetaPaciente=codigoColetaPaciente
-        )
 
         try:
+            # Cria um novo paciente
+            novo_paciente = Paciente(
+                CPF=CPF,
+                nome=nome,
+                dataNascimento=dataNascimento
+            )
+
+            # Adiciona o novo paciente ao banco de dados
             db.session.add(novo_paciente)
             db.session.commit()
+
             flash('Paciente cadastrado com sucesso!', 'success')
         except Exception as e:
             db.session.rollback()
@@ -117,7 +118,6 @@ class AtualizarColetaController(MethodView):
     def post(self, code):
         coleta = session.query(ColetaPaciente).get(code)
         if coleta:
-            coleta.codigoColetaPaciente = request.form['codigoColetaPaciente']
             coleta.coletaAnos = request.form['coletaAnos']
             coleta.ultimaColeta = request.form['ultimaColeta']
             coleta.proximaColeta = request.form['proximaColeta']
