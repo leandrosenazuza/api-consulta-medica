@@ -55,9 +55,9 @@
                                 <tbody>
                                 {% for paciente in pacientesFiltrados %}
                                 <tr>
-                                    <td>{{paciente.2}}</td>
-                                    <td>{{paciente.1}}</td>
-                                    <td>{{paciente.3}}</td>
+                                    <td>{{paciente.nome}}</td>
+                                    <td>{{paciente.CPF}}</td>
+                                    <td>{{paciente.dataNascimento}}</td>
                                     <td>
                                         <form action="/" method="post">
                                             <button type="submit" class="btn btn-success btn-fixed"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
