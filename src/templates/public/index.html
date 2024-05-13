@@ -20,7 +20,7 @@
 
                                         <input type="text" name="nomePaciente" class="form-control">
                                     </div>
-                                        <button type="submit" class="btn btn-primary btn-fixed"> Buscar </button>
+                                    <button type="submit" class="btn btn-primary btn-fixed"> Buscar </button>
                                 </div>
                             </form>
                         </div>
@@ -56,20 +56,16 @@
                                 {% for paciente in pacientesFiltrados %}
                                 <tr>
                                     <td>{{paciente.nome}}</td>
-                                    <td>{{paciente.CPF}}</td>
+                                    <td class="cpf">{{paciente.CPF}}</td>
                                     <td>{{paciente.dataNascimento}}</td>
                                     <td>
-                                        <form action="/" method="post">
-                                            <button type="submit" class="btn btn-success btn-fixed"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
-                                        </form>
+                                        <button type="button" class="btn btn-success btn-fixed" data-toggle="modal" data-target="#exameModal{{ paciente.codigoPaciente }}"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
                                     </td>
                                     <td>
-                                        <a href="/update/paciente/{{ paciente.0 }}">
-                                            <button type="button" class="btn btn-primary btn-fixed">Editar <i class="fa-solid fa-file-signature"></i></button>
-                                        </a>
+                                        <button type="button" class="btn btn-primary btn-fixed" data-toggle="modal" data-target="#editarModal{{ paciente.codigoPaciente }}">Editar <i class="fa-solid fa-file-signature"></i></button>
                                     </td>
                                     <td>
-                                        <form action="/delete/paciente/{{ paciente.0 }}" method="post">
+                                        <form action="/delete/paciente/{{ paciente.codigoPaciente }}" method="post">
                                             <button type="submit" class="btn btn-danger btn-fixed">Apagar <i class="fa-solid fa-file-circle-xmark"></i></button>
                                         </form>
                                     </td>
@@ -87,5 +83,52 @@
 </div>
 {% endif %}
 
-{% endblock %}
+<!-- Modal para realizar um exame -->
+{% for paciente in pacientesFiltrados %}
+<div class="modal fade" id="exameModal{{ paciente.codigoPaciente }}" tabindex="-1" role="dialog" aria-labelledby="exameModalLabel{{ paciente.codigoPaciente }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exameModalLabel{{ paciente.codigoPaciente }}">Realizar Exame para {{ paciente.nome }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário para realizar o exame -->
+                <form action="/realizar_exame/{{ paciente.codigoPaciente }}" method="POST">
+                    <!-- Campos do formulário para o exame -->
+                    <!-- ... -->
+                    <button type="submit" class="btn btn-primary">Realizar Exame</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
+<!-- Modal para editar informações do paciente -->
+{% for paciente in pacientesFiltrados %}
+<div class="modal fade" id="editarModal{{ paciente.codigoPaciente }}" tabindex="-1" role="dialog" aria-labelledby="editarModalLabel{{ paciente.codigoPaciente }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarModalLabel{{ paciente.codigoPaciente }}">Editar Informações de {{ paciente.nome }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário para editar informações do paciente -->
+                <form action="/editar_paciente/{{ paciente.codigoPaciente }}" method="POST">
+                    <!-- Campos do formulário para editar informações -->
+                    <!-- ... -->
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

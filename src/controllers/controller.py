@@ -105,6 +105,7 @@ class GetPacienteController(MethodView):
         return render_template('public/index.html', pacientesFiltrados=pacientesFiltrados)
 
 
+
 """
     def get(self):
         with mysql.cursor() as cur:
