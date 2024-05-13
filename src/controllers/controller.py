@@ -101,6 +101,11 @@ class GetPacienteController(MethodView):
     def get(self):
         parteNomeBuscado = request.args.get('nomePaciente')
         pacientesFiltrados = session.query(Paciente).filter(Paciente.nome.like(f'%{parteNomeBuscado}%')).all()
+
+        for paciente in pacientesFiltrados:
+            paciente.coleta = session.query(ColetaPaciente).filter_by(codigoColetaPaciente=paciente.codigoColetaPaciente).first()
+
+
         return render_template('public/index.html', pacientesFiltrados=pacientesFiltrados)
 
 
@@ -120,33 +125,3 @@ class AtualizarColetaController(MethodView):
         return redirect('/')
 
 
-
-
-"""
-    def get(self):
-        with mysql.cursor() as cur:
-        cur.execute("SELECT * FROM sys.TAB_PACIENTES")
-        data = cur.fetchall()
-        cur.execute("SELECT * FROM sys.TAB_COLETA_PACIENTE")
-        dataColeta = cur.fetchall()
-        return render_template('public/index.html', data=data, dataColeta=dataColeta);
-        
-     def post(self):
-        codigoPaciente = request.form['codigoPaciente'],
-        CPF = request.form['CPF'],
-        nome = request.form['nome'],
-        dataNascimento = request.form['dataNascimento'],
-        codigoColetaPaciente = request.form['codigoColetaPaciente']
-
-        with mysql.cursor() as cur:
-            try:
-                cur.execute(
-                    "INSERT INTO sys.TAB_PACIENTES(codigoPaciente, CPF,nome,dataNascimento,codigoColetaPaciente) VALUES(%s, %s, %s, %s, %s, %s)",
-                    (codigoPaciente, CPF, nome, dataNascimento
-                    , codigoColetaPaciente))
-                cur.connection.commit()
-                flash('Paciente cadastrado com sucesso!', 'sucess')
-            except:
-                flash('Este paciente não foi cadastrado!', 'error')
-            return redirect('/')    
-"""

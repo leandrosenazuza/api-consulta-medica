@@ -99,15 +99,15 @@
                     <!-- Campos do formulário para a coleta -->
                     <div class="form-group">
                         <label for="coletaAnos">Coletas Efetuadas</label>
-                        <input type="text" class="form-control" id="coletaAnos" name="coletaAnos" value="{{ paciente.coletaAnos }}" placeholder="Sequência de Coletas Efetuadas">
+                        <input type="text" class="form-control" id="coletaAnos" name="coletaAnos" value="{% if paciente.coleta %}{{ paciente.coleta.coletaAnos }}{% endif %}" placeholder="Sequência de Coletas Efetuadas">
                     </div>
                     <div class="form-group">
                         <label for="ultimaColeta">Última Coleta Efetuada</label>
-                        <input type="date" class="form-control" id="ultimaColeta" name="ultimaColeta" value="{{ paciente.ultimaColeta }}" placeholder="Data da Última coleta efetuada">
+                        <input type="date" class="form-control" id="ultimaColeta" name="ultimaColeta" value="{% if paciente.coleta %}{{ paciente.coleta.ultimaColeta }}{% endif %}" placeholder="Data da Última coleta efetuada">
                     </div>
                     <div class="form-group">
                         <label for="proximaColeta">Próxima Coleta Programada</label>
-                        <input type="date" class="form-control" id="proximaColeta" name="proximaColeta" value="{{ paciente.proximaColeta }}" placeholder="Data da Próxima coleta programada">
+                        <input type="date" class="form-control" id="proximaColeta" name="proximaColeta" value="{% if paciente.coleta %}{{ paciente.coleta.proximaColeta }}{% endif %}" placeholder="Data da Próxima coleta programada">
                     </div>
                     <button type="submit" class="btn btn-primary">Atualizar Coleta</button>
                 </form>
