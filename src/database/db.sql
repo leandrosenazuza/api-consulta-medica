@@ -5,10 +5,8 @@ CREATE TABLE IF NOT EXISTS TAB_PACIENTES(
     CPF VARCHAR(11) NOT NULL,
     nome VARCHAR(90) NOT NULL,
     dataNascimento DATE,
-    idade INT NOT NULL,
     codigoColetaPaciente INT(4) UNSIGNED ZEROFILL, -- (CHAVE ESTRANGEIRA)
     PRIMARY KEY(codigoPaciente),
-    --FOREIGN KEY (codigoColetaPaciente) REFERENCES TAB_COLETA_PACIENTE(codigoColetaPaciente) ON DELETE CASCADE
 
 )
 

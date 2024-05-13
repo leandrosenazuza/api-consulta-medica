@@ -510,5 +510,9 @@ R
 +src/templates/public/cadastrarPaciente.html,c\1\c1a34a7910b6746c3f89637a71326e3863f561d9
 G
 src/static/js/script.js,8\1\81e0048738836de833cb87bc131da666f496837a
-I
-src/static/images/fav.svg,f\9\f924581e013b40a53723850366915367b2f0eaae
+E
+src/model/paciente.py,3\d\3d2e27f8514848251d34f1577583e44447b4e834
+D
+src/config/config.py,3\f\3f6f06878770b2b5eda1a22dbdc8561c968dd40d
+K
+src/model/ColetaPaciente.py,6\d\6de5a8e4a121e5dc1dcd2bb63efe0402bd9fb8b6
