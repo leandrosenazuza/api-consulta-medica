@@ -3,7 +3,7 @@ import os
 from flask import Flask, send_from_directory
 
 from src.controllers.controller import IndexController, DeletePacienteController, UpdatePacienteController, \
-    CreatePacienteController, GetPacienteController
+    CreatePacienteController, GetPacienteController, AtualizarColetaController
 from src.db import session
 from src.model.Paciente import Paciente
 
@@ -18,16 +18,14 @@ rotasConfiguradas = {
     "update_route": "/update/paciente/<int:code>", "update_controller": UpdatePacienteController.as_view("update"),
     "createcoleta_route": "/paciente/create/", "createcoleta_controller": CreatePacienteController.as_view("post"),
     "get_paciente_route": "/get/paciente/", "get_paciente_controller": GetPacienteController.as_view("get"),
-   # "get_paciente_by_id_route": "/get/paciente/<int:code>", "get_paciente_by_id_controller": GetPacienteController.as_view("get_by_id"),
+    "updatecoleta_route": "/coleta/<int:code>/update/", "updatecoleta_controller": AtualizarColetaController.as_view("post"),
 }
 
 app.add_url_rule(rotasConfiguradas["index_route"], view_func=rotasConfiguradas["index_controller"])
 app.add_url_rule(rotasConfiguradas["delete_route"], view_func=rotasConfiguradas["delete_controller"])
 app.add_url_rule(rotasConfiguradas["update_route"], view_func=rotasConfiguradas["update_controller"])
 app.add_url_rule(rotasConfiguradas["get_paciente_route"], view_func=rotasConfiguradas["get_paciente_controller"])
-#app.add_url_rule(rotasConfiguradas["get_paciente_by_id_route"], view_func=rotasConfiguradas["get_paciente_by_id_controller"])
-app.add_url_rule(rotasConfiguradas["createcoleta_route"], view_func=rotasConfiguradas["createcoleta_controller"])
-
+app.add_url_rule(rotasConfiguradas["updatecoleta_route"], view_func=rotasConfiguradas["updatecoleta_controller"])
 
 @app.route("/<path:unknown>")
 def not_found(unknown):

@@ -10,7 +10,6 @@ class IndexController(MethodView):
     def get(self):
         data = session.query(Paciente).all()
         dataColeta = session.query(ColetaPaciente).all()
-        #dataColeta = ColetaPaciente.query.all()
         return render_template('public/index.html', data=data, dataColeta=dataColeta)
 
     def post(self):
@@ -103,6 +102,23 @@ class GetPacienteController(MethodView):
         parteNomeBuscado = request.args.get('nomePaciente')
         pacientesFiltrados = session.query(Paciente).filter(Paciente.nome.like(f'%{parteNomeBuscado}%')).all()
         return render_template('public/index.html', pacientesFiltrados=pacientesFiltrados)
+
+
+class AtualizarColetaController(MethodView):
+    def get(self, code):
+        coleta = session.query(ColetaPaciente).get(code)
+        return render_template('public/update.html', coleta=coleta)
+
+    def post(self, code):
+        coleta = session.query(ColetaPaciente).get(code)
+        if coleta:
+            coleta.codigoColetaPaciente = request.form['codigoColetaPaciente']
+            coleta.coletaAnos = request.form['coletaAnos']
+            coleta.ultimaColeta = request.form['ultimaColeta']
+            coleta.proximaColeta = request.form['proximaColeta']
+            db.session.commit()
+        return redirect('/')
+
 
 
 

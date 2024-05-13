@@ -59,7 +59,7 @@
                                     <td class="cpf">{{paciente.CPF}}</td>
                                     <td>{{paciente.dataNascimento}}</td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-fixed" data-toggle="modal" data-target="#exameModal{{ paciente.codigoPaciente }}"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
+                                        <button type="button" class="btn btn-success btn-fixed" data-toggle="modal" data-target="#exameModal{{ paciente.codigoColetaPaciente }}"> Exame <i class="fa-solid fa-file-arrow-up"></i></button>
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-primary btn-fixed" data-toggle="modal" data-target="#editarModal{{ paciente.codigoPaciente }}">Editar <i class="fa-solid fa-file-signature"></i></button>
@@ -83,9 +83,8 @@
 </div>
 {% endif %}
 
-<!-- Modal para realizar um exame -->
 {% for paciente in pacientesFiltrados %}
-<div class="modal fade" id="exameModal{{ paciente.codigoPaciente }}" tabindex="-1" role="dialog" aria-labelledby="exameModalLabel{{ paciente.codigoPaciente }}" aria-hidden="true">
+<div class="modal fade" id="exameModal{{ paciente.codigoColetaPaciente }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -95,17 +94,29 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Formulário para realizar o exame -->
-                <form action="/realizar_exame/{{ paciente.codigoPaciente }}" method="POST">
-                    <!-- Campos do formulário para o exame -->
-                    <!-- ... -->
-                    <button type="submit" class="btn btn-primary">Realizar Exame</button>
+                <!-- Formulário para atualizar dados da coleta -->
+                <form action="/coleta/{{ paciente.codigoColetaPaciente }}/update/" method="POST">
+                    <!-- Campos do formulário para a coleta -->
+                    <div class="form-group">
+                        <label for="coletaAnos">Coletas Efetuadas</label>
+                        <input type="text" class="form-control" id="coletaAnos" name="coletaAnos" value="{{ paciente.coletaAnos }}" placeholder="Sequência de Coletas Efetuadas">
+                    </div>
+                    <div class="form-group">
+                        <label for="ultimaColeta">Última Coleta Efetuada</label>
+                        <input type="date" class="form-control" id="ultimaColeta" name="ultimaColeta" value="{{ paciente.ultimaColeta }}" placeholder="Data da Última coleta efetuada">
+                    </div>
+                    <div class="form-group">
+                        <label for="proximaColeta">Próxima Coleta Programada</label>
+                        <input type="date" class="form-control" id="proximaColeta" name="proximaColeta" value="{{ paciente.proximaColeta }}" placeholder="Data da Próxima coleta programada">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Atualizar Coleta</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 {% endfor %}
+
 
 =
 {% for paciente in pacientesFiltrados %}
