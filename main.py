@@ -1,9 +1,5 @@
 from src.app import app
-
-
-HOST='localhost'
-PORT=4000
-DEBUG=True
+from src.config.config import *
 
 if(__name__ == '__main__'):
     app.run(HOST, PORT, DEBUG)

@@ -1,0 +1,97 @@
+.modal-title{
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.card-header{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+
+.md-form label {
+    font-size: 1rem;
+    font-weight: 5rem;
+}
+
+table {
+    text-align: center;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid gray;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+     font-weight: bold;
+     font-size: 1em;
+}
+
+table th, table td {
+    border: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+body {
+    background-color: #f3eae8;
+}
+
+.btn-link {
+    font-weight: bold;
+    align-items: center;
+}
+
+.btn-fixed {
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
+
+.navbar.sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    height: 60px;
+
+}
+
+
+.card-header{
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: rgb(177, 175, 174);
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+}
+
+#content-main {
+    width:60%
+}
+
+
+
+
+
+
+
+
+
+

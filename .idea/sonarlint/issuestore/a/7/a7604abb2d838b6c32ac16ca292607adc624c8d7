@@ -1,0 +1,2 @@
+
+¶python:S5890]"Replace the type hint "Sequence[tuple[int, str, str, bool]]" with "Optional[Sequence[tuple[int, str, str, bool]]]" or don't assign "None" to "charsets_tuple"(ú–Ù

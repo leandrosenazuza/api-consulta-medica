@@ -1,0 +1,12 @@
+
+vpython:S1186^"YAdd a nested comment explaining why this method is empty, or complete the implementation.(æ¾ÎËúÿÿÿÿ
+vpython:S1186a"YAdd a nested comment explaining why this method is empty, or complete the implementation.(–ÁØÎýÿÿÿÿ
+rpython:S3776³"TRefactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.(æ¾ÎËúÿÿÿÿ
+jpython:S1134×"LTake the required action to fix the issue indicated by this "FIXME" comment.(ƒéªãüÿÿÿÿ
+epython:S1134ø"LTake the required action to fix the issue indicated by this "FIXME" comment.(°Õª
+jpython:S1134¼"LTake the required action to fix the issue indicated by this "FIXME" comment.(ƒéªãüÿÿÿÿ
+[python:S112ú">Replace this generic exception class with a more specific one.(å³Êöþÿÿÿÿ
+mpython:S3776ˆ"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(ÖÞ•Ñ
+Vpython:S112 ">Replace this generic exception class with a more specific one.(Ð‰Ë¯
+Vpython:S112«">Replace this generic exception class with a more specific one.(Ð‰Ë¯
+[python:S112‹">Replace this generic exception class with a more specific one.(³ÚÌ½øÿÿÿÿ

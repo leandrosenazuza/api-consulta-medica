@@ -1,0 +1,8 @@
+
+Ipython:S4423,",Change this code to use a stronger protocol.(Ì…†Êÿÿÿÿÿ
+Dpython:S4423-",Change this code to use a stronger protocol.(ÍêÆ¶
+Ipython:S4423/",Change this code to use a stronger protocol.(ÝÉâöþÿÿÿÿ
+vpython:S5886Á"]Return a value of type "bytearray" instead of "NoneType" or update function "read" type hint.(ò¤Ÿù
+mpython:S3776ª"TRefactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.(±Ô‘ñ
+vpython:S5717±"]Change this default value to "None" and initialize this parameter inside the function/method.(½­ÎÝ
+Ypython:S4830Ó"@Enable server certificate validation on this SSL/TLS connection.(¿Ý¾Æ

@@ -1,0 +1,4 @@
+
+kpython:S1542G"SRename function "DateFromTicks" to match the regular expression ^[a-z_][a-z0-9_]*$.(Êò‹ÿ
+ppython:S1542L"SRename function "TimeFromTicks" to match the regular expression ^[a-z_][a-z0-9_]*$.(ê·¿èýÿÿÿÿ
+upython:S1542Q"XRename function "TimestampFromTicks" to match the regular expression ^[a-z_][a-z0-9_]*$.(ïŠ¤×ûÿÿÿÿ
