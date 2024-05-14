@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import uuid4
 
 from flask.views import MethodView
@@ -75,14 +76,19 @@ class CreatePacienteController(MethodView):
         dataNascimento = request.form['dataNascimento']
 
         try:
-            # Cria um novo paciente
+            # Criando uma nova instância de ColetaPaciente e adicionando-a ao banco de dados
+            nova_coleta_paciente = ColetaPaciente()
+            db.session.add(nova_coleta_paciente)
+            db.session.flush()  # Para obter o ID da coleta recém-criada
+
+            # Criando um novo paciente e associando-o à coleta criada
             novo_paciente = Paciente(
                 CPF=CPF,
                 nome=nome,
-                dataNascimento=dataNascimento
+                dataNascimento=dataNascimento,
+                coleta_paciente=nova_coleta_paciente
             )
 
-            # Adiciona o novo paciente ao banco de dados
             db.session.add(novo_paciente)
             db.session.commit()
 

@@ -4,10 +4,10 @@ from src.db import Base
 
 
 class Paciente(Base):
-    __tablename__ = 'TAB_PACIENTES'  # Corrigido
+    __tablename__ = 'TAB_PACIENTES'
 
     codigoPaciente = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    CPF = Column(String(20), nullable=False)  # Corrigido
+    CPF = Column(String(20), nullable=False)
     nome = Column(String(90), nullable=False)
     dataNascimento = Column(Date)
     codigoColetaPaciente = Column(Integer, ForeignKey('TAB_COLETA_PACIENTE.codigoColetaPaciente'), nullable=True)
