@@ -10,8 +10,6 @@
 src/app.py,a\c\ac95095330a4a20b1f198c92db70024a198bb660
 M
 src/controllers/controller.py,5\7\5767ca2009cbecb33237b0f6b91565fea0c9666b
-D
-src/routes/routes.py,2\7\27b244889909b0048f22e9af737e1b79369334b3
 C
 src/database/db.sql,b\a\bafc1d06065291448be18f8e783ad891f6440004
 Z
@@ -494,10 +492,6 @@ G
 src/templates/base.html,5\3\53d43689e8f59a96532a4b7fefe5b3fe7dfbe2e3
 O
 src/templates/public/index.html,b\3\b357c0207397b0c2d1cf8bd748d3b5c42fb8cfa3
-P
- src/templates/public/update.html,4\9\49dcf99b80f5fe9cc5281ba5186c195611028be8
-P
- src/templates/public/coleta.html,7\2\72bfb32d7c2d31ab0cda8cc97ad84960b19da49a
 O
 src/templates/partials/msg.html,b\4\b47f17f51f60c5fd23d4925a625323ce23b6a246
 O
@@ -506,8 +500,6 @@ H
 src/static/css/style.css,5\2\5278550501a4adda3a484630a3bd48f734aba3b4
 R
 "src/templates/partials/footer.html,5\b\5b980dd978dbfa44c7f548fde33fd8b22c0ed601
-[
-+src/templates/public/cadastrarPaciente.html,c\1\c1a34a7910b6746c3f89637a71326e3863f561d9
 G
 src/static/js/script.js,8\1\81e0048738836de833cb87bc131da666f496837a
 E
@@ -516,3 +508,5 @@ D
 src/config/config.py,3\f\3f6f06878770b2b5eda1a22dbdc8561c968dd40d
 K
 src/model/ColetaPaciente.py,6\d\6de5a8e4a121e5dc1dcd2bb63efe0402bd9fb8b6
+E
+src/model/Paciente.py,b\5\b5807292f7af6acf9bb3e396c9b7647e7bb74a30
